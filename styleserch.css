@@ -1,0 +1,190 @@
+/* ===================================================
+   RESET GENERAL
+   =================================================== */
+
+* { /* El selector * aplica a TODOS los elementos de la página */
+    margin: 0; /* Quita el margen por defecto que el navegador pone a cada elemento */
+    padding: 0; /* Quita el relleno interno por defecto */
+    box-sizing: border-box; /* El padding y el border se cuentan DENTRO del ancho/alto declarado, no se suman aparte */
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Tipografía general; si no existe usa Arial y luego cualquier sans-serif */
+    color: #1c1c1c; /* Color de texto por defecto: gris casi negro, más suave que el negro puro */
+    background-color: #ffffff; /* Fondo blanco general de la página */
+}
+
+
+/* ===================================================
+   SECCIÓN HERO (bloque principal superior)
+   =================================================== */
+
+.hero {
+    background-color: #f6f7f9; /* Gris muy claro para diferenciar el hero del resto de la página */
+    padding-top: 60px; /* Espacio arriba del contenido del hero */
+    padding-bottom: 60px; /* Espacio abajo del contenido del hero */
+}
+
+.hero-container {
+    max-width: 1200px; /* Ancho máximo del contenido para que no se estire en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor horizontalmente (margen automático izquierda/derecha) */
+    display: flex; /* Activa Flexbox para poner los hijos en fila */
+    align-items: center; /* Centra verticalmente el texto y la imagen entre sí */
+    justify-content: space-between; /* Separa el bloque de texto y el de imagen a los extremos */
+    gap: 40px; /* Espacio entre la columna de texto y la columna de imagen */
+    padding-left: 24px; /* Respiro interno a la izquierda en pantallas pequeñas */
+    padding-right: 24px; /* Respiro interno a la derecha en pantallas pequeñas */
+    flex-wrap: wrap; /* Permite que las columnas bajen una debajo de otra si no caben (responsive) */
+}
+
+.hero-text {
+    flex: 1 1 420px; /* Puede crecer (1), encogerse (1) y su tamaño base es 420px */
+    max-width: 480px; /* Evita que el texto se estire demasiado en pantallas anchas */
+}
+
+.hero-text h1 {
+    font-size: 42px; /* Tamaño grande para el título principal */
+    line-height: 1.25; /* Espacio entre líneas del título, para que no se vea apretado */
+    font-weight: 700; /* Grosor de letra en negrita */
+    margin-bottom: 18px; /* Espacio debajo del título antes del subtítulo */
+}
+
+.hero-text h1 .highlight {
+    color: #17a86a; /* Verde para resaltar la segunda línea del título ("from 8 years") */
+    display: block; /* Fuerza que el span ocupe su propia línea, como un salto de línea */
+}
+
+.hero-subtitle {
+    font-size: 16px; /* Tamaño de texto legible para el subtítulo */
+    color: #6b7280; /* Gris medio, más suave que el título, típico para texto secundario */
+    line-height: 1.6; /* Espacio entre líneas para facilitar la lectura */
+    margin-bottom: 28px; /* Espacio debajo del subtítulo antes del botón */
+}
+
+.btn-register {
+    background-color: #17a86a; /* Verde principal de marca, igual que el resaltado del título */
+    color: #ffffff; /* Texto blanco para que contraste con el fondo verde */
+    border: none; /* Sin borde, para un look plano y moderno */
+    padding: 14px 32px; /* Espacio interno: 14px arriba/abajo, 32px izquierda/derecha */
+    font-size: 15px; /* Tamaño de letra del botón */
+    font-weight: 600; /* Semi-negrita para que destaque */
+    border-radius: 6px; /* Esquinas ligeramente redondeadas */
+    cursor: pointer; /* Cambia el cursor a "manita" al pasar por encima, indicando que es clicable */
+    transition: background-color 0.3s ease; /* Anima el cambio de color de fondo en 0.3s (ej. al hacer hover) */
+}
+
+.btn-register:hover {
+    background-color: #128a56; /* Verde un poco más oscuro al pasar el mouse, da retroalimentación visual */
+}
+
+.hero-dots {
+    display: flex; /* Pone los puntos en fila */
+    gap: 8px; /* Espacio entre cada punto */
+    margin-top: 32px; /* Separación respecto al botón de arriba */
+}
+
+.dot {
+    width: 8px; /* Ancho del punto */
+    height: 8px; /* Alto del punto (igual al ancho = círculo) */
+    border-radius: 50%; /* Vuelve el cuadrado en un círculo perfecto */
+    background-color: #d1d5db; /* Gris claro para los puntos inactivos */
+    display: inline-block; /* Permite darle ancho/alto aunque sea un span */
+}
+
+.dot.active {
+    background-color: #17a86a; /* El punto activo se pinta del verde de marca para distinguirlo */
+    width: 22px; /* Se alarga (deja de ser círculo) para simular una barrita, como en el mockup */
+    border-radius: 4px; /* Esquinas redondeadas suaves en vez de círculo, ya que ahora es rectangular */
+}
+
+.hero-image {
+    flex: 1 1 420px; /* Igual que .hero-text: puede crecer/encogerse con base de 420px */
+    display: flex; /* Flexbox para poder centrar la imagen dentro */
+    justify-content: center; /* Centra la imagen horizontalmente dentro de su columna */
+}
+
+.hero-image img {
+    width: 100%; /* La imagen ocupa todo el ancho disponible de su contenedor */
+    max-width: 460px; /* Pero nunca crece más de 460px, para que no se vea gigante en pantallas anchas */
+    height: auto; /* Mantiene la proporción original del SVG al cambiar el ancho */
+}
+
+
+/* ===================================================
+   SECCIÓN CLIENTES :)
+   =================================================== */
+
+.clients {
+    background-color: #fbfbfc; /* Gris casi blanco, apenas distinto del blanco puro, para separar la sección */
+    padding-top: 56px; /* Espacio arriba del contenido */
+    padding-bottom: 56px; /* Espacio abajo del contenido */
+    text-align: center; /* Centra todo el texto de esta sección (título, subtítulo) */
+}
+
+.clients-container {
+    max-width: 1000px; /* Ancho máximo del contenido de esta sección */
+    margin: 0 auto; /* Centra el bloque horizontalmente */
+    padding-left: 24px; /* Respiro lateral en pantallas pequeñas */
+    padding-right: 24px; /* Respiro lateral en pantallas pequeñas */
+}
+
+.clients h2 {
+    font-size: 28px; /* Tamaño del título "Our Clients" */
+    font-weight: 700; /* Negrita para destacar el título */
+    margin-bottom: 10px; /* Espacio entre el título y el subtítulo */
+}
+
+.clients-subtitle {
+    font-size: 15px; /* Tamaño de letra del texto descriptivo */
+    color: #6b7280; /* Gris medio, igual que el subtítulo del hero, para mantener consistencia */
+    margin-bottom: 40px; /* Espacio antes de la fila de logos */
+}
+
+.clients-logos {
+    display: flex; /* Flexbox para alinear los logos en una fila */
+    align-items: center; /* Centra los logos verticalmente entre sí, aunque tengan alturas distintas */
+    justify-content: center; /* Centra todo el grupo de logos horizontalmente */
+    flex-wrap: wrap; /* Si no caben en una sola línea, pasan a la siguiente (responsive) */
+    gap: 48px; /* Espacio entre cada logo */
+}
+
+.client-logo {
+    height: 36px; /* Altura fija para que todos los logos se vean del mismo tamaño visual */
+    width: auto; /* El ancho se ajusta automáticamente para mantener la proporción del SVG */
+    opacity: 0.85; /* Ligera transparencia para un look sutil, como "marca de agua" */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Anima opacidad y tamaño al hacer hover, en 0.3s */
+}
+
+.client-logo:hover {
+    opacity: 1; /* Al pasar el mouse, el logo se ve completamente opaco (resalta) */
+    transform: scale(1.08); /* Y crece ligeramente (8%) para dar sensación interactiva */
+}
+
+
+/* ===================================================
+   RESPONSIVE: pantallas pequeñas (celulares) no lo pidió el profe pero se investigó
+   =================================================== */
+
+@media (max-width: 768px) { /* Estilos que solo aplican cuando el ancho de pantalla es 768px o menos */
+
+    .hero-container {
+        flex-direction: column; /* Apila texto e imagen en columna en vez de en fila */
+        text-align: center; /* Centra el texto ya que ahora está solo, arriba de la imagen */
+    }
+
+    .hero-dots {
+        justify-content: center; /* Centra los puntos del carrusel cuando todo está en columna */
+    }
+
+    .hero-text {
+        max-width: 100%; /* Deja que el texto use todo el ancho disponible en pantallas chicas */
+    }
+
+    .hero-text h1 {
+        font-size: 32px; /* Reduce el tamaño del título para que quepa mejor en pantallas pequeñas */
+    }
+
+    .clients-logos {
+        gap: 28px; /* Reduce el espacio entre logos para que quepan más por fila */
+    }
+}

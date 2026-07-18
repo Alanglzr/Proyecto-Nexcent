@@ -24,7 +24,18 @@ body {
   background: var(--gray);
 }
 
-.container {
+.container {}
+
+footer {
+  background-color: #263238;
+  padding: 60px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -125,4 +136,138 @@ body {
   color: var(--white);
   width: fit-content;
   margin-top: 32px;
+}
+
+/* logo, copyright, y redes sociales */
+.logo {
+  max-width: 260px;
+}
+
+.logo img {
+  height: 26px;
+  margin-bottom: 20px;
+}
+
+.logo h6 {
+  color: #F5F7FA;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.social-media a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #333d4a;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.social-media a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.social-media a:hover {
+  background-color: #454f5e;
+}
+
+/* Columnas Company y Support */
+.footer-links h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 14px;
+}
+
+.footer-links ul li a {
+  color: #9aa3af;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+}
+
+/* Newsletter */
+.footer-email h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-email form {
+  display: flex;
+  align-items: center;
+  background-color: #333d4a;
+  border-radius: 6px;
+  padding: 10px 14px;
+  width: 260px;
+}
+
+.footer-email input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 14px;
+  flex: 1;
+}
+
+.footer-email input::placeholder {
+  color: #9aa3af;
+}
+
+.footer-email button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer-email button:hover {
+  opacity: 0.8;
+
+}
+
+.footer-email img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-email form {
+    width: 100%;
+  }
 }

@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  .header2{
+    max-width: 1440px;
+    height: 390px;
+    margin: 0 auto;
+    display:flex;
+    background: #f5f7fa;
+    justify-content: normal;
+    align-items: normal;
+    padding: 32px;
+    padding-bottom: 32px;    
+  }
+
+  .logo-card{
+    content:"";
+    position:relative;
+    inset:0;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08), transparent 60%);
+  }
+
+  .logo-card img{
+    width: 326px;
+    height: 326px;
+    object-fit: contain;
+    position: relative;       
+  }
+
+   .testimonial{
+    max-width:748px;
+    height: 168px;
+    margin:0 24x 24px 0;
+    font-family: 'Inter', sans-serif;
+    style: medium;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+    color: #717171;
+  }
+
+  .author-name{     
+    margin: 0 0 4px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4caf4f;
+    vertical-align: middle;
+    font-family: 'Inter', sans-serif;
+    line-height: 28px;
+  }
+
+  .author-org{
+    margin: 4px 0 28px 0;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    style: regular;
+    line-height: 24px;
+    vertical-align: middle;
+    color: #89939e;
+  }
+
+  .footer-row{
+    display:flex;
+    align-items:center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo-strip{
+    display:flex;
+    align-items:center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .logo-strip img,
+  .logo-strip {
+    height: 22px;
+    width: auto;
+    opacity: 0.9;
+  }
+
+  .meet-all{
+    margin-left: auto;
+    display:inline-flex;
+    align-items:center;
+    gap: 6px;
+    color: #4caf4f;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: gap 0.2s ease, opacity 0.2s ease;
+  }
+
+  .meet-all:hover{
+    gap: 10px;
+    opacity: 0.85;
+  }
+
+  .meet-all svg{
+    width: 16px;
+    height: 16px;
+  }
+					

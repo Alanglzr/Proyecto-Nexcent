@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --green: #43A046;
+  --gray: #F5F7FA;
+  --white: #fff;
+  --black: #4d4d4d;
+  --black-100: #717171;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--gray);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 50px;
+}
+
+.menu ul a {
+  text-decoration: none;
+  color: #717171;
+  font-size: 16px;
+  line-height: 1.5;
+  display: block;
+  padding: 10px 20px;
+  transition: all 0.5s ease;
+}
+
+.menu ul a:hover {
+  border-radius: 6px;
+  color: #fff;
+  background: var(--green);
+}
+
+.signin {
+  display: flex;
+  gap: 14px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 1.43;
+  text-decoration: none;
+  border-radius: 4px;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.login {
+  color: var(--green);
+}
+
+.login:hover {
+  text-decoration: underline;
+}
+
+.signup {
+  background: var(--green);
+  color: var(--white);
+}
+
+.hero {
+  padding: 96px 0;
+  background: var(--gray);
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-container h1 {
+  font-size: 64px;
+  line-height: 1.18;
+  color: var(--black);
+}
+
+.hero-container h1>strong {
+  display: block;
+  color: var(--green);
+}
+
+.hero-container p {
+  color: var(--black-100);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.btn-hero {
+  background: var(--green);
+  color: var(--white);
+  width: fit-content;
+  margin-top: 32px;
+}

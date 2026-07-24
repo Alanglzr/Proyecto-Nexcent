@@ -1,318 +1,190 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Inter;
+/* ===================================================
+   RESET GENERAL
+   =================================================== */
+
+* { /* El selector * aplica a TODOS los elementos de la página */
+    margin: 0; /* Quita el margen por defecto que el navegador pone a cada elemento */
+    padding: 0; /* Quita el relleno interno por defecto */
+    box-sizing: border-box; /* El padding y el border se cuentan DENTRO del ancho/alto declarado, no se suman aparte */
 }
 
-/*Header */
-
-.header {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  align-items: center;
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Tipografía general; si no existe usa Arial y luego cualquier sans-serif */
+    color: #1c1c1c; /* Color de texto por defecto: gris casi negro, más suave que el negro puro */
+    background-color: #ffffff; /* Fondo blanco general de la página */
 }
 
-.menu ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  gap: 50px;
-}
 
-.menu ul a {
-  text-decoration: none;
-  color: #717171;
-  font-size: 16px;
-  line-height: 1.5;
-  display: block;
-  padding: 10px 20px;
-  transition: all 0.5s ease;
-}
+/* ===================================================
+   SECCIÓN HERO (bloque principal superior)
+   =================================================== */
 
-.menu ul a:hover {
-  border-radius: 6px;
-  color: #fff;
-  background: #4CAF4F;
-}
-
-/*Footer */
-
-footer {
-  background-color:#263238;
-  padding: 60px;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* logo, copyright, y redes sociales */
-.logo {
- max-width: 260px;
-}
-
-.logo img {
-  height: 26px;
-  margin-bottom: 20px;
-}
-
-.logo h6 {
-  color: #F5F7FA;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.social-media {
-  display: flex;
-  gap: 10px;
-}
-
-.social-media a{
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #333d4a;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.social-media a img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.social-media a:hover {
-  background-color: #454f5e;
-}
-
-/* Columnas Company y Support */
-.footer-links h4 {
-    font-size: 15px;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links ul li {
-    margin-bottom: 14px;
-}
-
-.footer-links ul li a {
-    color: #9aa3af;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s ease;
-}
-
-.footer-links ul li a:hover {
-    color: #ffffff;
-}
-
-/* Newsletter */
-.footer-email h4 {
-    font-size: 15px;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.footer-email form {
-    display: flex;
-    align-items: center;
-    background-color: #333d4a;
-    border-radius: 6px;
-    padding: 10px 14px;
-    width: 260px;
-}
-
-.footer-email input {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #ffffff;
-    font-size: 14px;
-    flex: 1;
-}
-
-.footer-email input::placeholder {
-    color: #9aa3af;
-}
-
-.footer-email button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.footer-email button:hover {
-    opacity: 0.8;
-
-}
-
-.footer-email img {
-    width: 18px;
-    height: 18px;
-}
-
-/* Responsivo */
-@media (max-width: 700px) {
-    .footer-content {
-        flex-direction: column;
-    }
-    .footer-email form {
-        width: 100%;
-    }
-}
-
-/*Contador */
-
-.stats{
-    width: 100%;
-    min-height: 300px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 80px;
-}
-
-.left{
-    width: 45%;
-}
-
-.left h1{
-    font-size: 48px;
-    color: #2d2d2d;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.left span{
-    color: #4caf50;
-}
-
-.left p{
-    color: #666;
-    font-size: 18px;
-}
-
-.right{
-    width: 45%;
-    display: grid;
-
-grid-template-columns:repeat(2,1fr);
-    gap: 40px;
-}
-
-.card{
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.card i{
-    font-size: 38px;
-    color: #4caf50;
-}
-
-.card h2{
-    font-size: 36px;
-    color: #333;
-}
-
-.card span{
-    color: #777;
-    font-size: 17px;
-}
-
-@media(max-width:768px) {
-    .stats{
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-    .left,
-    .right{
-        width: 100;
-    }
-    .right{
-        margin-top: 40px;
-        grid-template-columns: 1fr;
-    }
-    .left h1{
-        font-size: 34px;
-    }
-    .card{
-        justify-content: center;
-    }
-}
-
-  /*Contador */
 .hero {
-    background-color: #f5f7fa;
-    border-bottom: 1px solid #e2e5ea;
-    padding: 60px 20px;
-    text-align: center;
+    background-color: #f6f7f9; /* Gris muy claro para diferenciar el hero del resto de la página */
+    padding-top: 60px; /* Espacio arriba del contenido del hero */
+    padding-bottom: 60px; /* Espacio abajo del contenido del hero */
 }
 
-.hero h1 {
-    font-size: 44px;
-    font-weight: 800;
-    color: #2c3540;
-    line-height: 1.3;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
+.hero-container {
+    max-width: 1200px; /* Ancho máximo del contenido para que no se estire en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor horizontalmente (margen automático izquierda/derecha) */
+    display: flex; /* Activa Flexbox para poner los hijos en fila */
+    align-items: center; /* Centra verticalmente el texto y la imagen entre sí */
+    justify-content: space-between; /* Separa el bloque de texto y el de imagen a los extremos */
+    gap: 40px; /* Espacio entre la columna de texto y la columna de imagen */
+    padding-left: 24px; /* Respiro interno a la izquierda en pantallas pequeñas */
+    padding-right: 24px; /* Respiro interno a la derecha en pantallas pequeñas */
+    flex-wrap: wrap; /* Permite que las columnas bajen una debajo de otra si no caben (responsive) */
 }
 
-.btn-demo {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #4caf50;
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 12px 24px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+.hero-text {
+    flex: 1 1 420px; /* Puede crecer (1), encogerse (1) y su tamaño base es 420px */
+    max-width: 480px; /* Evita que el texto se estire demasiado en pantallas anchas */
 }
 
-.btn-demo:hover {
-    background-color: #429a46;
+.hero-text h1 {
+    font-size: 42px; /* Tamaño grande para el título principal */
+    line-height: 1.25; /* Espacio entre líneas del título, para que no se vea apretado */
+    font-weight: 700; /* Grosor de letra en negrita */
+    margin-bottom: 18px; /* Espacio debajo del título antes del subtítulo */
 }
 
-.btn-demo .arrow {
-    font-size: 16px;
+.hero-text h1 .highlight {
+    color: #17a86a; /* Verde para resaltar la segunda línea del título ("from 8 years") */
+    display: block; /* Fuerza que el span ocupe su propia línea, como un salto de línea */
 }
 
-@media (max-width: 600px) {
-    .hero h1 {
-      font-size: 30px;
+.hero-subtitle {
+    font-size: 16px; /* Tamaño de texto legible para el subtítulo */
+    color: #6b7280; /* Gris medio, más suave que el título, típico para texto secundario */
+    line-height: 1.6; /* Espacio entre líneas para facilitar la lectura */
+    margin-bottom: 28px; /* Espacio debajo del subtítulo antes del botón */
+}
+
+.btn-register {
+    background-color: #17a86a; /* Verde principal de marca, igual que el resaltado del título */
+    color: #ffffff; /* Texto blanco para que contraste con el fondo verde */
+    border: none; /* Sin borde, para un look plano y moderno */
+    padding: 14px 32px; /* Espacio interno: 14px arriba/abajo, 32px izquierda/derecha */
+    font-size: 15px; /* Tamaño de letra del botón */
+    font-weight: 600; /* Semi-negrita para que destaque */
+    border-radius: 6px; /* Esquinas ligeramente redondeadas */
+    cursor: pointer; /* Cambia el cursor a "manita" al pasar por encima, indicando que es clicable */
+    transition: background-color 0.3s ease; /* Anima el cambio de color de fondo en 0.3s (ej. al hacer hover) */
+}
+
+.btn-register:hover {
+    background-color: #128a56; /* Verde un poco más oscuro al pasar el mouse, da retroalimentación visual */
+}
+
+.hero-dots {
+    display: flex; /* Pone los puntos en fila */
+    gap: 8px; /* Espacio entre cada punto */
+    margin-top: 32px; /* Separación respecto al botón de arriba */
+}
+
+.dot {
+    width: 8px; /* Ancho del punto */
+    height: 8px; /* Alto del punto (igual al ancho = círculo) */
+    border-radius: 50%; /* Vuelve el cuadrado en un círculo perfecto */
+    background-color: #d1d5db; /* Gris claro para los puntos inactivos */
+    display: inline-block; /* Permite darle ancho/alto aunque sea un span */
+}
+
+.dot.active {
+    background-color: #17a86a; /* El punto activo se pinta del verde de marca para distinguirlo */
+    width: 22px; /* Se alarga (deja de ser círculo) para simular una barrita, como en el mockup */
+    border-radius: 4px; /* Esquinas redondeadas suaves en vez de círculo, ya que ahora es rectangular */
+}
+
+.hero-image {
+    flex: 1 1 420px; /* Igual que .hero-text: puede crecer/encogerse con base de 420px */
+    display: flex; /* Flexbox para poder centrar la imagen dentro */
+    justify-content: center; /* Centra la imagen horizontalmente dentro de su columna */
+}
+
+.hero-image img {
+    width: 100%; /* La imagen ocupa todo el ancho disponible de su contenedor */
+    max-width: 460px; /* Pero nunca crece más de 460px, para que no se vea gigante en pantallas anchas */
+    height: auto; /* Mantiene la proporción original del SVG al cambiar el ancho */
+}
+
+
+/* ===================================================
+   SECCIÓN CLIENTES :)
+   =================================================== */
+
+.clients {
+    background-color: #fbfbfc; /* Gris casi blanco, apenas distinto del blanco puro, para separar la sección */
+    padding-top: 56px; /* Espacio arriba del contenido */
+    padding-bottom: 56px; /* Espacio abajo del contenido */
+    text-align: center; /* Centra todo el texto de esta sección (título, subtítulo) */
+}
+
+.clients-container {
+    max-width: 1000px; /* Ancho máximo del contenido de esta sección */
+    margin: 0 auto; /* Centra el bloque horizontalmente */
+    padding-left: 24px; /* Respiro lateral en pantallas pequeñas */
+    padding-right: 24px; /* Respiro lateral en pantallas pequeñas */
+}
+
+.clients h2 {
+    font-size: 28px; /* Tamaño del título "Our Clients" */
+    font-weight: 700; /* Negrita para destacar el título */
+    margin-bottom: 10px; /* Espacio entre el título y el subtítulo */
+}
+
+.clients-subtitle {
+    font-size: 15px; /* Tamaño de letra del texto descriptivo */
+    color: #6b7280; /* Gris medio, igual que el subtítulo del hero, para mantener consistencia */
+    margin-bottom: 40px; /* Espacio antes de la fila de logos */
+}
+
+.clients-logos {
+    display: flex; /* Flexbox para alinear los logos en una fila */
+    align-items: center; /* Centra los logos verticalmente entre sí, aunque tengan alturas distintas */
+    justify-content: center; /* Centra todo el grupo de logos horizontalmente */
+    flex-wrap: wrap; /* Si no caben en una sola línea, pasan a la siguiente (responsive) */
+    gap: 48px; /* Espacio entre cada logo */
+}
+
+.client-logo {
+    height: 36px; /* Altura fija para que todos los logos se vean del mismo tamaño visual */
+    width: auto; /* El ancho se ajusta automáticamente para mantener la proporción del SVG */
+    opacity: 0.85; /* Ligera transparencia para un look sutil, como "marca de agua" */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Anima opacidad y tamaño al hacer hover, en 0.3s */
+}
+
+.client-logo:hover {
+    opacity: 1; /* Al pasar el mouse, el logo se ve completamente opaco (resalta) */
+    transform: scale(1.08); /* Y crece ligeramente (8%) para dar sensación interactiva */
+}
+
+
+/* ===================================================
+   RESPONSIVE: pantallas pequeñas (celulares) no lo pidió el profe pero se investigó
+   =================================================== */
+
+@media (max-width: 768px) { /* Estilos que solo aplican cuando el ancho de pantalla es 768px o menos */
+
+    .hero-container {
+        flex-direction: column; /* Apila texto e imagen en columna en vez de en fila */
+        text-align: center; /* Centra el texto ya que ahora está solo, arriba de la imagen */
+    }
+
+    .hero-dots {
+        justify-content: center; /* Centra los puntos del carrusel cuando todo está en columna */
+    }
+
+    .hero-text {
+        max-width: 100%; /* Deja que el texto use todo el ancho disponible en pantallas chicas */
+    }
+
+    .hero-text h1 {
+        font-size: 32px; /* Reduce el tamaño del título para que quepa mejor en pantallas pequeñas */
+    }
+
+    .clients-logos {
+        gap: 28px; /* Reduce el espacio entre logos para que quepan más por fila */
     }
 }

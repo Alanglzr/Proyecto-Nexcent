@@ -1,8 +1,8 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Inter;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
 }
 
 /*Header */
@@ -40,7 +40,6 @@
 }
 
 /*Footer */
-
 footer {
   background-color:#263238;
   padding: 60px;
@@ -441,48 +440,167 @@ grid-template-columns:repeat(2,1fr);
 
 /*Hero */
 .hero {
-    background-color: #f5f7fa;
-    border-bottom: 1px solid #e2e5ea;
-    padding: 60px 20px;
+    background-color: #f6f7f9; 
+    padding-top: 60px; 
+    padding-bottom: 60px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1 1 420px;
+    max-width: 480px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero-text h1 .highlight {
+    color: #17a86a;
+    display: block;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.btn-register {
+    background-color: #17a86a;
+    color: #ffffff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #128a56;
+}
+
+.hero-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #17a86a;
+    width: 22px;
+    border-radius: 4px;
+}
+
+.hero-image {
+    flex: 1 1 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+}
+
+/*Clientes*/
+.clients {
+    background-color: #fbfbfc;
+    padding-top: 56px;
+    padding-bottom: 56px;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 44px;
-    font-weight: 800;
-    color: #2c3540;
-    line-height: 1.3;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
+.clients-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
-.btn-demo {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #4caf50;
-    color: white;
-    text-decoration: none;
+.clients h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.clients-subtitle {
     font-size: 15px;
-    font-weight: 500;
-    padding: 12px 24px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+    color: #6b7280;
+    margin-bottom: 40px;
 }
 
-.btn-demo:hover {
-    background-color: #429a46;
+.clients-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px;
 }
 
-.btn-demo .arrow {
-    font-size: 16px;
+.client-logo {
+    height: 36px;
+    width: auto;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-@media (max-width: 600px) {
-    .hero h1 {
-      font-size: 30px;
+.client-logo:hover {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+/* ===================================================
+   RESPONSIVE: pantallas pequeñas (celulares) no lo pidió el profe pero se investigó
+   =================================================== */
+
+@media (max-width: 768px) { 
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-dots {
+        justify-content: center;
+    }
+
+    .hero-text {
+        max-width: 100%; 
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .clients-logos {
+        gap: 28px;
     }
 }
 
